@@ -3,3 +3,13 @@ body{
   font-family: Avenir, sans-serif;
   font-weight: 400;
 }
+:root {
+  --text: #202020;
+  --background: #ffffff;
+  --primary : #f5bb00ff;
+  --secundary: #264653ff;
+  --accent: #FAC54F;
+  --contrast: #d76a03ff;
+  --extra: #bf3100ff;
+  --violet: #702632; 
+}
