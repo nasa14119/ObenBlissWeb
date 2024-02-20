@@ -2,6 +2,9 @@
 body{
   font-family: Avenir, sans-serif;
   font-weight: 400;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 400vh;
 }
 :root {
   --text: #202020;

@@ -1,0 +1,39 @@
+---
+  import logo from "../../assets/img/logo_ovenBliss.svg"
+---
+<main>
+  <div class="w-full h-full grid place-content-center">
+    <span class="bg-primary w-[50vw] aspect-square rounded-full ball"></span>
+  </div>
+  <div class="w-full h-full grid place-content-center">
+    <img src={logo.src} class="w-[80%] mx-auto"/>
+  </div>
+</main>
+<style>
+  main{
+    display: grid;
+    place-content: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    height: 100vh;
+  } 
+  main > *{
+    grid-area: 1 / 1;
+  }
+
+  @keyframes ballIn {
+    from{
+      transform: scale(2.5);
+    }
+    to{
+      transform: scale(1);
+    }
+  }
+  .ball{
+    animation: ballIn 500ms ease forwards;
+    animation-delay: 50ms;
+    position: relative;
+    z-index: -10;
+  }
+</style>
