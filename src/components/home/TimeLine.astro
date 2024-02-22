@@ -1,7 +1,8 @@
-<section class="h-[300vh] w-[100vw] conteiner-progress relative">
-  <div class="w-full flex sticky top-0 justify-center">
+<section class="m-h-[300vh] w-[100vw] conteiner-progress relative pb-10">
+  <div class="w-full flex sticky top-0 justify-center -z-10">
     <div class="w-5 h-[5vh] bg-accent rounded-xl progress absolute inset-b-5 -top-5"></div>
   </div>
+  <slot/>
 </section>
 <style>
 </style>
@@ -14,7 +15,6 @@
     scrollTrigger:{
       trigger: ".conteiner-progress", 
       scrub: true, 
-      start: "top top", 
     }
   })
   gsap.from("#c",{duration: 1, drawSVG:0})
