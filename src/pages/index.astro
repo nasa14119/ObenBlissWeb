@@ -1,17 +1,19 @@
 ---
 import "../assets/css/index.css"
 import Hero from "../components/home/Hero.astro"
+import TimeLine from "../components/home/TimeLine.astro"
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png+xml" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
 		<title>OvenBliss</title>
 	</head>
-	<body>
+	<body class="bg-violet">
+		<!-- <div class="h-[100vh]"></div> -->
 		<Hero/> 
+		<TimeLine />
 	</body>
 </html>
