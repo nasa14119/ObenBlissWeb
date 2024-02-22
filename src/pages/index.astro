@@ -2,6 +2,7 @@
 import "../assets/css/index.css"
 import Hero from "../components/home/Hero.astro"
 import TimeLine from "../components/home/TimeLine.astro"
+import Footer from "../components/home/Footer.astro"
 ---
 
 <html lang="es">
@@ -14,7 +15,7 @@ import TimeLine from "../components/home/TimeLine.astro"
 	<body class="">
 		<Hero/> 
 		<TimeLine>
-			<section class="w-full h-fit grid p-10 grid-cols-2 mt-14 gap-x-5">
+			<section class="w-screen h-fit grid px-10 grid-cols-2 mt-14 gap-x-5">
 				<div class="w-3/5 p-2 bg-contrast rounded-lg h-fit text-white m-auto">
 					<h2 class="text-3xl font-bold">Mision</h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, rem commodi possimus aut perferendis mollitia sapiente cupiditate exercitationem cumque aperiam.</p>
@@ -23,20 +24,21 @@ import TimeLine from "../components/home/TimeLine.astro"
 					<img src="https://images.unsplash.com/photo-1612444875893-f50140963da6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
 				</div>
 			</section>
-			<section class="w-full h-fit grid p-10 grid-cols-2">
+			<section class="w-screen h-fit grid p-10 grid-cols-2">
 				<div class="p-10 h-[90vh]">
 					<img class="object-cover h-full w-full rounded-[5rem]" src="https://images.unsplash.com/photo-1590841609987-4ac211afdde1?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de unos brownies">
 				</div>
 				<div class="w-3/5 aspect-square p-2 bg-secundary rounded-lg h-fit text-white m-auto text-right">
-					<h2 class="text-3xl font-bold text-center">Otra Info</h2>
+					<h2 class="text-3xl font-bold text-center">Historia</h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, rem commodi possimus aut perferendis mollitia sapiente cupiditate exercitationem cumque aperiam.</p>
 				</div>
 			</section>
-			<section class="w-full h-fit grid p-10 grid-cols-2 z-10">
+			<section class="w-screen h-fit grid p-10 grid-cols-2 z-10">
 				<div class="p-10 h-[90vh] col-span-2">
 					<img class="object-cover h-full w-full rounded-[5rem]" src="https://images.unsplash.com/photo-1512325605119-b10de50ecba9?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de unos brownies">
 				</div>
 			</section>
 		</TimeLine>
+		<Footer/>
 	</body>
 </html>
