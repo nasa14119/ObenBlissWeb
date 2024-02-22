@@ -1,16 +1,16 @@
 ---
   import logo from "../../assets/img/logo_ovenBliss.svg"
 ---
-<main>
+<header class="">
   <div class="w-full h-full grid place-content-center">
-    <span class="bg-primary w-[50vw] aspect-square rounded-full ball"></span>
+    <span class="bg-primary w-[30vw] min-w-[350px] max-w-[750px] aspect-square rounded-full animate-jump-in animate-duration-700 animate-delay-200"></span>
   </div>
-  <div class="w-full h-full grid place-content-center">
-    <img src={logo.src} class="w-[80%] mx-auto"/>
+  <div class="w-full h-full grid place-content-center animate-fade-up animate-delay-300">
+    <img src={logo.src} class="w-[50%] mx-auto"/>
   </div>
-</main>
+</header>
 <style>
-  main{
+  header{
     display: grid;
     place-content: center;
     grid-template-rows: 1fr;
@@ -18,22 +18,7 @@
     width: 100vw;
     height: 100vh;
   } 
-  main > *{
+  header > *{
     grid-area: 1 / 1;
-  }
-
-  @keyframes ballIn {
-    from{
-      transform: scale(2.5);
-    }
-    to{
-      transform: scale(1);
-    }
-  }
-  .ball{
-    animation: ballIn 500ms ease forwards;
-    animation-delay: 50ms;
-    position: relative;
-    z-index: -10;
   }
 </style>
