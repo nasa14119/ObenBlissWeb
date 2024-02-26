@@ -1,0 +1,28 @@
+<section class="w-screen h-fit grid p-10 grid-cols-2">
+  <div class="p-10 h-[90vh]" id="img-historia-container">
+    <img id="img-historia" class="object-cover h-full w-full rounded-[5rem]" src="https://images.unsplash.com/photo-1590841609987-4ac211afdde1?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de unos brownies">
+  </div>
+  <div class="w-3/5 aspect-square p-2 bg-secundary rounded-lg h-fit text-white m-auto text-right">
+    <h2 class="text-3xl font-bold text-center">Historia</h2>
+    <p> 
+      En mi familia ha estado la receta de los brownies, mi mamá solía hacerla pero cada vez menos. Algun día me propuse a hacerla y me di cuenta que yo tambien podia crearlos. Estaba cansado de los productos que hay en la cafetería de mi escuela, sobre todo su sabor y precio. Así decidi, poner la competencia a la cafetería y vender un producto mejor al suyo. 
+    </p>
+  </div>
+</section>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger); 
+  gsap.from("#img-historia", {
+    transform: "translateY(-50%)", 
+    scrollTrigger:{
+      trigger: "#img-historia-container", 
+      scrub: true, 
+      start:"-100",
+      end: "350vh", 
+    },
+  }) 
+  gsap.to("#img-historia", {
+    transform: "translateY(0)"
+  }) 
+</script>
