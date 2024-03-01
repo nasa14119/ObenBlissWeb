@@ -10,16 +10,30 @@
     <img src={logo.src} class="w-1/4"/>
   </div>
   <div class="w-full h-full relative z-50 ">
-    <div class="absolute bottom-[25%] w-full  flex items-center flex-col gap-y-2">
+    <div class="absolute bottom-[25%] w-full  flex items-center flex-col gap-y-2" id="btn-contact">
       <button class="py-2 px-4 rounded-[5rem] text-extra border-extra border w-fit">
         Contacto
       </button>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-extra">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-extra cursor-pointer">
         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
       </svg>
     </div>
 </div>
 </header>
+<script>
+  import gsap from "gsap";
+  import ScrollToPlugin from "gsap/ScrollToPlugin";
+  gsap.registerPlugin(ScrollToPlugin)
+  const $btn = document.querySelector("#btn-contact"); 
+  const scrollContact = () =>{
+    gsap.to(window, {
+      duration: 1.2,
+      scrollTo:{y:"footer", offsetY:70}, 
+      ease: "power2.in"
+    });
+  }
+  $btn?.addEventListener("click", scrollContact)
+</script>
 <style>
   header{
     display: grid;
