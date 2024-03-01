@@ -1,6 +1,32 @@
-<footer id="footer" class="py-10 px-20 rounded-t-[5rem] bg-contrast">
-  <div class="flex justify-between">
+<footer id="footer" class="py-10 px-20 rounded-t-[5rem] bg-accent relative">
+  <div class="flex justify-between items-center text-secundary">
     <span>+56 2711 6282</span>
     <span>@ovenbliss_bakery</span>
   </div>
+  <div class="absolute inset-0 flex justify-center items-center">
+    <span class="buy rounded-[5rem] w-fit h-fit border-2 border-white text-white font-black px-5 py-2">
+      <a href="/buy" class="" >Comprar Ahora</a>
+    </span>
+  </div>
 </footer>
+<style>
+  @keyframes buy-animation-out {
+    from{
+      transform: translateY(-10%);
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
+  @keyframes buy-animation {
+    to{
+      transform: translateY(-10%);
+    }
+  }
+  .buy{
+    animation: buy-animation-out 500ms forwards;
+  }
+  .buy:hover{
+    animation: buy-animation 700ms forwards;
+  }
+</style>

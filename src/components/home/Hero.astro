@@ -2,12 +2,23 @@
   import logo from "../../assets/img/logo_ovenBliss.svg"
 ---
 <header class="">
-  <div class="w-full h-full grid place-content-center">
-    <span class="bg-primary w-[30vw] min-w-[350px] max-w-[750px] aspect-square rounded-full animate-jump-in animate-duration-700 animate-delay-200"></span>
+  <div class="w-full h-full grid place-items-center">
+    <div class="bg-primary w-[30vw] min-w-[350px] max-w-[750px] aspect-square rounded-full animate-jump-in animate-duration-700 animate-delay-200">
+    </div>
   </div>
-  <div class="w-full h-full grid place-content-center animate-fade-up animate-delay-300">
-    <img src={logo.src} class="w-[50%] mx-auto"/>
+  <div class="w-full h-full grid place-items-center animate-fade-up animate-delay-300">
+    <img src={logo.src} class="w-1/4"/>
   </div>
+  <div class="w-full h-full relative z-50 ">
+    <div class="absolute bottom-[25%] w-full  flex items-center flex-col gap-y-2">
+      <button class="py-2 px-4 rounded-[5rem] text-extra border-extra border w-fit">
+        Contacto
+      </button>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-extra">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+      </svg>
+    </div>
+</div>
 </header>
 <style>
   header{
