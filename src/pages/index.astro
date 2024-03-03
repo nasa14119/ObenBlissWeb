@@ -5,6 +5,7 @@ import TimeLine from "../components/home/TimeLine.astro"
 import Footer from "../components/home/Footer.astro"
 import Mision from "../components/home/Mision.astro"
 import Historia from "../components/home/Historia.astro"
+import Brownies from "../assets/img/Recipie1.jpeg"
 ---
 
 <html lang="es">
@@ -19,9 +20,9 @@ import Historia from "../components/home/Historia.astro"
 		<TimeLine>
 			<Mision/>
 			<Historia /> 
-			<section class="w-screen h-fit grid p-10 grid-cols-2 z-10">
-				<div class="p-10 h-[90vh] col-span-2">
-					<img class="object-cover h-full w-full rounded-[5rem]" src="https://images.unsplash.com/photo-1512325605119-b10de50ecba9?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de unos brownies">
+			<section class="w-screen h-fit grid p-10 grid-cols-1 z-10">
+				<div class="h-[70vh] max-w-[815px] aspect-video mx-auto rounded-[5rem] bg-secundary overflow-hidden">
+					<img class="w-[120%] object-none object-bottom" src={Brownies.src} alt="Imagen de unos brownies">
 				</div>
 			</section>
 		</TimeLine>

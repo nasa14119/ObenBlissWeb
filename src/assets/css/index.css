@@ -1,9 +1,11 @@
 @import url(./FontAvenir.css);
 body{
+  overflow-x: hidden; 
   font-family: Avenir, sans-serif;
   font-weight: 400;
   min-height: 100vh;
   min-width: 100vw;
+  max-width: 100vw;
 }
 :root {
   --text: #202020;
