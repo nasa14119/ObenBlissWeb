@@ -1,0 +1,134 @@
+---
+import "../assets/css/index.css"
+import ImgChangin from "../components/ImgChangin.astro"
+--- 
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png+xml" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<title>OvenBliss</title>
+	</head>
+	<body class="bg-accent">
+    <main class="w-screen h-screen bg-accent relative max-w-[1024px] mx-auto">
+      <header class="flex p-10 items-end gap-x-2">
+        <h1 class="font-extrabold text-secundary text-5xl">Tamaños</h1>
+        <a href="/" class="font-light text-4xl text-secundary">- Home</a>
+      </header>
+      <section class="flex justify-between items-start h-[60vh]">
+        <div id="btn-brownie" class="bg-extra text-accent w-1/5 h-full py-10 px-2 rounded-r-[5rem] flex flex-col justify-center items-center">
+          <h2 class="font-bold uppercase text-3xl text-center">unidad</h2>
+          <h3 class="font-medium uppercase text-3xl mx-auto w-fit">$20</h3>
+        </div>
+        <div id="btn-brownies" class="bg-contrast text-primary w-1/5 h-full py-10 px-2 rounded-l-[5rem] flex flex-col justify-center items-center">
+          <h2 class="font-bold uppercase text-3xl text-center">paquete</h2>
+          <h3 class="font-semibold uppercase text-3xl mx-auto w-fit">20</h3>
+          <h3 class="font-medium uppercase text-2xl mx-auto w-fit">por $300</h3>
+        </div>
+      </section>
+      <ImgChangin/>
+    </main>
+    <footer id="footer" class="py-10 px-20 rounded-t-[5rem] bg-secundary fixed bottom-0 inset-x-0 z-50">
+      <div class="flex justify-between items-center text-accent">
+        <span>+56 2711 6282</span>
+        <span>@ovenbliss_bakery</span>
+      </div>
+      <div class="absolute inset-0 flex justify-center items-center">
+        <a href="https://www.instagram.com/ovenbliss_bakery/?hl=es-es" target="_blank" class="buy rounded-[5rem] w-fit h-fit border-2 border-white text-white font-black px-5 py-2 cursor-pointer">
+          <span class="" >Contactanos</span>
+        </a>
+      </div>
+    </footer>
+	</body>
+</html>
+<style is:global>
+  @keyframes getInBrownie {
+    from{
+      transform: rotate(312deg) translateX(-70%);
+    }
+    to{
+      transform: rotate(360deg) translateX(0);
+    }
+  }
+  @keyframes getOutBrownie {
+    from{
+      transform: rotate(360deg) translateX(0);
+    }
+    to{
+      transform: rotate(312deg) translateX(-70%);
+    }
+  }
+  @keyframes getInBrownies {
+    from{
+      transform: rotate(60deg) translateX(72%);
+    }
+    to{
+      transform: rotate(0deg) translateX(0);
+    }
+  }
+  @keyframes getOutBrownies {
+    from{
+      transform: rotate(0deg) translateX(0);
+    }
+    to{
+      transform: rotate(60deg) translateX(72%);
+    }
+  }
+  .image-1.active{
+    animation: getInBrownie 750ms ease forwards;
+    transform: rotate(312deg) translateX(-70%);
+    animation-delay: 100ms;
+    z-index: 50;
+  }
+  .image-1.no-active{
+    animation: getOutBrownie 750ms ease forwards;
+    animation-delay: 100ms;
+  }
+  .image-2.active{
+    z-index: 50;
+    animation: getInBrownies 750ms ease forwards;
+  }
+  .image-2.no-active{
+    animation: getOutBrownies 750ms ease forwards;
+    animation-delay: 100ms;
+  }
+  @keyframes buy-animation-out {
+    from{
+      transform: translateY(-10%);
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
+  @keyframes buy-animation {
+    to{
+      transform: translateY(-10%);
+    }
+  }
+  .buy{
+    animation: buy-animation-out 500ms forwards;
+  }
+  .buy:hover{
+    animation: buy-animation 700ms forwards;
+  }
+</style>
+<script>
+  const $btnbrownie = document.querySelector("#btn-brownie"); 
+  const $btnbrownies = document.querySelector("#btn-brownies");
+  const $brownie = document.querySelector("#brownie"); 
+  const $brownies = document.querySelector("#brownies");
+  function getBrownies() {
+    $brownies?.classList.remove("no-active")
+    $brownies?.classList.add("active")
+    $brownie?.classList.remove("active")
+    $brownie?.classList.add("no-active")
+  }
+  function getBrownie() {
+    $brownies?.classList.remove("active")
+    $brownies?.classList.add("no-active")
+    $brownie?.classList.remove("no-active")
+    $brownie?.classList.add("active")
+  }
+  $btnbrownie?.addEventListener("mouseover", getBrownie)
+  $btnbrownies?.addEventListener("mouseover", getBrownies)
+</script>
